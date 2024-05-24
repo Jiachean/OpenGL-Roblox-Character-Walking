@@ -414,27 +414,28 @@ void drawRobloxCharacter() {
     glRotatef((GLfloat)cTurn, 0.0, 1.0, 0.0);
     //rl
     glTranslatef(0.375, 0.0, 0.0);
-    glTranslatef(0.0, 0.7, 0.0);
+    glTranslatef(0.0, 0.5, 0.0);
     glColor3f(0.5, 0.8, 0.3);
     //rl
     glPushMatrix();
     glScalef(0.5, 0.8, 0.5);
     if (isWalking) {
         // Adjust leg angle for walking animation
-        glRotatef(walkingLegAngle, 1.0, 0.0, 0.0);
+        glRotatef(walkingLegAngle / 3, 1.0, 0.0, 0.0);
     }
     glutSolidCube(1.0);
     glPopMatrix();
     //ll
     glTranslatef(-0.75, 0.0, 0.0);
-    glTranslatef(0.0, 0.7, 0.0);
+    if (isWalking) {
+        // Adjust leg angle for walking animation
+        glRotatef(-walkingLegAngle / 3, 1.0, 0.0, 0.0);
+    }
+    glTranslatef(0.0, -0.05, 0.0);
     glColor3f(0.5, 0.8, 0.3);
     glPushMatrix();
     glScalef(0.5, 0.8, 0.5);
-    if (isWalking) {
-        // Adjust leg angle for walking animation
-        glRotatef(-walkingLegAngle, 1.0, 0.0, 0.0);
-    }
+
     glutSolidCube(1.0);
     glPopMatrix();
 
@@ -446,6 +447,7 @@ void drawRobloxCharacter() {
 void drawCharacter2() {
     drawRobloxCharacter();
 }
+
 
 void drawCharacter1() {
 
