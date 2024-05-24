@@ -193,8 +193,8 @@ void leftLeg()
 	glColor3f(1, 0.7, 0.7);
 	glutSolidCube(0.3);
 
-	glScalef(0.625, 0.25, 1.0);
-	glTranslatef(0, -0.2625, 0);
+	glScalef(1.25, 0.25, 1.0);
+	glTranslatef(0, -0.75, 0);
 	glColor3f(0.3, 0, 0);
 	glutSolidCube(0.3);
 	glPopMatrix();
@@ -215,8 +215,8 @@ void rightLeg()
 	glColor3f(1, 0.7, 0.7);
 	glutSolidCube(0.3);
 
-	glScalef(0.625, 0.25, 1.0);
-	glTranslatef(0, -0.2625, 0);
+	glScalef(1.25, 0.25, 1.0);
+	glTranslatef(0, -0.75, 0);
 	glColor3f(0.3, 0, 0);
 	glutSolidCube(0.3);
 	glPopMatrix();
@@ -468,4 +468,3 @@ int main(int argc, char** argv)
 	glutMainLoop();
 	return 0;
 }
-
