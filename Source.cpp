@@ -105,7 +105,6 @@ void keyboard(unsigned char key, int x, int y) {
         break;
     default:
         isWalking = false;
-        isRunning = false;
         break;
     }
 
